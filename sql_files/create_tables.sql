@@ -79,3 +79,11 @@ CREATE TABLE IF NOT EXISTS user_book (
     PRIMARY KEY (user_id, book_id)
 );
 
+CREATE TABLE IF NOT EXISTS queue (
+    id UUID PRIMARY KEY,
+    book_id UUID REFERENCES book(id) ON DELETE CASCADE NOT NULL,
+    user_id UUID REFERENCES "user"(id) ON DELETE CASCADE NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+
