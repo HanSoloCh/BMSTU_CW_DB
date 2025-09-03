@@ -1,0 +1,9 @@
+[submodule "my_app"]
+	path = my_app
+	url = https://github.com/HanSoloCh/BMSTU_PPO
+[submodule "src/my_app"]
+	path = src/my_app
+	url = https://github.com/HanSoloCh/BMSTU_PPO
+[submodule "src/https:/github.com/HanSoloCh/BMSTU_PPO/tree/1b9e12eda8aca1ff5735d4bdf75adeacc1cbc780/my_app"]
+	path = src/https:/github.com/HanSoloCh/BMSTU_PPO/tree/1b9e12eda8aca1ff5735d4bdf75adeacc1cbc780/my_app
+	url = https://github.com/HanSoloCh/BMSTU_PPO
