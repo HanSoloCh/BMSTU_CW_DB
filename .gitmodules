@@ -1,3 +1,6 @@
 [submodule "my_app"]
 	path = my_app
 	url = https://github.com/HanSoloCh/BMSTU_PPO
+[submodule "src/my_app"]
+	path = src/my_app
+	url = https://github.com/HanSoloCh/BMSTU_PPO
