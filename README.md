@@ -12,7 +12,7 @@
 2) Потом импортируем [файлы с данными](https://github.com/HanSoloCh/BMSTU_CW_DB/tree/0ac776a9ca6ae2ccd4ac06bd082970fd9eb59943/data), либо через pgAdmin, либо как-то еще;
 3) Перед запуском переходим в папку [docker](https://github.com/HanSoloCh/BMSTU_CW_DB/tree/0ac776a9ca6ae2ccd4ac06bd082970fd9eb59943/docker);
 4) Прописываем `sudo systemctl stop postgresql`;
-5) Прописываем `sudo docker-compose up`; (Эта последовательность команд нужна потому что докер поднимается на том же порту, что и postgres)
+5) Прописываем `sudo docker-compose up` (Эта последовательность команд нужна потому что докер поднимается на том же порту, что и postgres);
 6) Запускаем [сервер](https://github.com/HanSoloCh/BMSTU_CW_DB/tree/0ac776a9ca6ae2ccd4ac06bd082970fd9eb59943/src/my_app/api);
 7) Запускаем [UI](https://github.com/HanSoloCh/BMSTU_CW_DB/tree/0ac776a9ca6ae2ccd4ac06bd082970fd9eb59943/src/my_app/ui);
 8) Для того чтобы войти в приложение не под профилем читателя, нужно будет в ручную в базе покапаться и изменить роль.
