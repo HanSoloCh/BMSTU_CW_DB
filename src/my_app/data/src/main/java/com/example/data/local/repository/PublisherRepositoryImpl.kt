@@ -49,7 +49,7 @@ class PublisherRepositoryImpl(
 
     override suspend fun deleteById(publisherId: UUID) = withContext(Dispatchers.IO) {
         transaction(db) {
-            ApuEntity.deleteWhere { id eq publisherId }
+            PublisherEntity.deleteWhere { id eq publisherId }
         }
     }
 
