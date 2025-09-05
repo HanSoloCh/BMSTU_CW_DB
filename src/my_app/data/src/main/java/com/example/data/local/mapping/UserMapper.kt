@@ -18,6 +18,7 @@ object UserMapper {
             secondName = row[UserEntity.secondName],
             password = row[UserEntity.password],
             phoneNumber = row[UserEntity.phoneNumber],
+            email = row[UserEntity.email],
             role = UserRole.valueOf(row[UserEntity.role])
         )
     }
@@ -33,6 +34,7 @@ object UserMapper {
             it[UserEntity.secondName] = userModel.secondName
             it[UserEntity.password] = userModel.password
             it[UserEntity.phoneNumber] = userModel.phoneNumber
+            it[UserEntity.email] = userModel.email
             it[UserEntity.role] = userModel.role.toString()
         }
     }
@@ -45,6 +47,7 @@ object UserMapper {
             it[UserEntity.secondName] = userModel.secondName
             it[UserEntity.password] = userModel.password
             it[UserEntity.phoneNumber] = userModel.phoneNumber
+            it[UserEntity.email] = userModel.email
             it[UserEntity.role] = userModel.role.toString()
         }
     }

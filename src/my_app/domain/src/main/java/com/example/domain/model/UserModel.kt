@@ -17,6 +17,7 @@ data class UserModel(
     val secondName: String? = null,
     val password: String,
     val phoneNumber: String,
+    val email: String? = null,
     val role: UserRole,
 ) {
     init {
@@ -25,9 +26,13 @@ data class UserModel(
             surname.isBlank() -> throw EmptyStringException("surname")
             secondName != null && secondName.isBlank() -> throw EmptyStringException("secondName")
             password.isBlank() -> throw EmptyStringException("password")
+            email != null && !isValidEmail(email) -> throw InvalidEmailException(email)
         }
     }
 
+    private fun isValidEmail(email: String): Boolean {
+        return email.matches(Regexes.EMAIL_ADDRESS)
+    }
 
     private fun isValidPhone(phone: String): Boolean {
         return phone.matches(Regexes.PHONE_NUMBER)

@@ -11,8 +11,8 @@ class UserMapper @Inject constructor() {
         surname = user.surname,
         secondName = user.secondName,
         password = user.password,
-        email = user.email,
         phoneNumber = user.phoneNumber,
+        email = user.email,
         role = user.role,
     )
 
@@ -22,8 +22,8 @@ class UserMapper @Inject constructor() {
         surname = user.surname,
         secondName = user.secondName,
         password = user.password,
-        email = user.email,
         phoneNumber = user.phoneNumber,
+        email = user.email,
         role = user.role,
     )
 }

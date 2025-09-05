@@ -17,7 +17,6 @@ class PublisherMapper @Inject constructor() {
         id = publisher.id,
         name = publisher.name,
         description = publisher.description,
-        foundationYear = publisher.foundationYear,
         email = publisher.email,
         phoneNumber = publisher.phoneNumber,
     )

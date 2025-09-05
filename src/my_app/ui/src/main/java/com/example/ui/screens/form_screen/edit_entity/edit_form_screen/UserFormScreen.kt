@@ -68,7 +68,6 @@ fun UserFormScreen(viewModel: EditEntityViewModel, navController: NavController)
             DetailRow("Имя", form.name)
             DetailRow("Отчество", form.secondName)
             DetailRow("Номер телефона", form.phoneNumber)
-            DetailRow("Электронная почта", form.email)
 
             Spacer(Modifier.height(16.dp))
             RoleDropdown(form.role) { newRole ->

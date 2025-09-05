@@ -11,6 +11,7 @@ object UserMapper {
         secondName = form.secondName.ifEmpty { null },
         password = form.password,
         phoneNumber = form.phoneNumber,
+        email = form.email,
         role = form.role,
     )
 
@@ -21,6 +22,7 @@ object UserMapper {
         secondName = model.secondName ?: "",
         password = model.password,
         phoneNumber = model.phoneNumber,
+        email = model.email ?: "",
         role = model.role,
     )
 }

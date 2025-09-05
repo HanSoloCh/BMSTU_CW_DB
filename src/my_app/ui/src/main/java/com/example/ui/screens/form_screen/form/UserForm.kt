@@ -10,6 +10,7 @@ data class UserForm(
     val secondName: String = "",
     val password: String = "",
     val phoneNumber: String = "",
+    val email: String = "",
     val role: UserRole = UserRole.READER,
 ) : ValidatableForm {
     override fun validate(): Map<String, String?> {
@@ -19,7 +20,7 @@ data class UserForm(
         errors["password"] = if (surname.isBlank()) "Пароль обязателен" else null
 
         errors["phoneNumber"] = checkPhone(phoneNumber)
-
+        errors["email"] = checkEmail(email)
         return errors
     }
 
@@ -30,4 +31,11 @@ data class UserForm(
         return null
     }
 
+    fun checkEmail(email: String): String? {
+        val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$".toRegex()
+        if (email.isNotBlank() && !email.matches(emailRegex)) {
+            return "Неверный формат электронной почты"
+        }
+        return null
+    }
 }

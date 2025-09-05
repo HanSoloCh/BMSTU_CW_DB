@@ -64,13 +64,6 @@ fun PublisherFormScreen(viewModel: EditEntityViewModel, navController: NavContro
                 modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
-                value = form.foundationYear,
-                onValueChange = { viewModel.publisherForm = form.copy(foundationYear = it) },
-                label = { Text("Год основания") },
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                modifier = Modifier.fillMaxWidth()
-            )
-            OutlinedTextField(
                 value = form.email,
                 onValueChange = { viewModel.publisherForm = form.copy(email = it) },
                 label = { Text("Email") },
