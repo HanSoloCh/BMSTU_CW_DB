@@ -15,7 +15,6 @@ data class PublisherModel(
     val id: @Contextual UUID = UUID.randomUUID(),
     val name: String,
     val description: String? = null,
-    val foundationYear: Int? = null,
     val email: String? = null,
     val phoneNumber: String? = null,
 ) {
@@ -23,9 +22,6 @@ data class PublisherModel(
         when {
             name.isBlank() -> throw EmptyStringException("name")
             description != null && description.isBlank() -> throw EmptyStringException("description")
-            foundationYear != null && foundationYear !in 0..Year.now().value -> throw InvalidDateException(
-                foundationYear.toString()
-            )
 
             email != null && !isValidEmail(email) -> throw InvalidEmailException(email)
             phoneNumber != null && !isValidPhone(phoneNumber) -> throw InvalidPhoneException(

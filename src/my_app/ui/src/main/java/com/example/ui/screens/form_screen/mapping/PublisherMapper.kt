@@ -8,7 +8,6 @@ object PublisherMapper {
         id = form.id,
         name = form.name,
         description = form.description.ifEmpty { null },
-        foundationYear = form.foundationYear.toIntOrNull(),
         email = form.email.ifEmpty { null },
         phoneNumber = form.phoneNumber.ifEmpty { null },
     )
@@ -17,7 +16,6 @@ object PublisherMapper {
         id = model.id,
         name = model.name,
         description = model.description ?: "",
-        foundationYear = if (model.foundationYear == null) "" else model.foundationYear.toString(),
         email = model.email ?: "",
         phoneNumber = if (model.phoneNumber == null) "" else model.phoneNumber.toString(),
     )

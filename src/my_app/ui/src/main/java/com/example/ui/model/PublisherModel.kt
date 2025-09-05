@@ -9,7 +9,6 @@ data class PublisherModel(
     val id: @Contextual UUID,
     val name: String,
     val description: String?,
-    val foundationYear: Int?,
     val email: String?,
     val phoneNumber: String?,
 )

@@ -9,7 +9,6 @@ data class UserForm(
     val surname: String = "",
     val secondName: String = "",
     val password: String = "",
-    val email: String = "",
     val phoneNumber: String = "",
     val role: UserRole = UserRole.READER,
 ) : ValidatableForm {
@@ -17,9 +16,9 @@ data class UserForm(
         val errors = mutableMapOf<String, String?>()
         errors["name"] = if (name.isBlank()) "Имя обязательно" else null
         errors["surname"] = if (surname.isBlank()) "Фамилия обязательна" else null
+        errors["password"] = if (surname.isBlank()) "Пароль обязателен" else null
 
         errors["phoneNumber"] = checkPhone(phoneNumber)
-        errors["password"] = checkEmail(email)
 
         return errors
     }
@@ -30,14 +29,5 @@ data class UserForm(
         if (!phoneNumber.matches(phoneRegex)) return "Некорректный номер телефона"
         return null
     }
-
-    fun checkEmail(email: String): String? {
-        val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$".toRegex()
-        if (email.isNotBlank() && !email.matches(emailRegex)) {
-            return "Неверный формат электронной почты"
-        }
-        return null
-    }
-
 
 }

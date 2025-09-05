@@ -10,7 +10,6 @@ object UserMapper {
         surname = form.surname,
         secondName = form.secondName.ifEmpty { null },
         password = form.password,
-        email = form.email.ifEmpty { null },
         phoneNumber = form.phoneNumber,
         role = form.role,
     )
@@ -21,7 +20,6 @@ object UserMapper {
         surname = model.surname,
         secondName = model.secondName ?: "",
         password = model.password,
-        email = model.email ?: "",
         phoneNumber = model.phoneNumber,
         role = model.role,
     )

@@ -14,7 +14,6 @@ object PublisherMapper {
             id = row[PublisherEntity.id].value,
             name = row[PublisherEntity.name],
             description = row[PublisherEntity.name],
-            foundationYear = row[PublisherEntity.foundationYear],
             email = row[PublisherEntity.email],
             phoneNumber = row[PublisherEntity.phoneNumber]
         )
@@ -28,7 +27,6 @@ object PublisherMapper {
             it[PublisherEntity.id] = publisherModel.id
             it[PublisherEntity.name] = publisherModel.name
             it[PublisherEntity.description] = publisherModel.description
-            it[PublisherEntity.foundationYear] = publisherModel.foundationYear
             it[PublisherEntity.email] = publisherModel.email
             it[PublisherEntity.phoneNumber] = publisherModel.phoneNumber
         }
@@ -42,7 +40,6 @@ object PublisherMapper {
             it[PublisherEntity.id] = publisherModel.id
             it[PublisherEntity.name] = publisherModel.name
             it[PublisherEntity.description] = publisherModel.description
-            it[PublisherEntity.foundationYear] = publisherModel.foundationYear
             it[PublisherEntity.email] = publisherModel.email
             it[PublisherEntity.phoneNumber] = publisherModel.phoneNumber
         }
